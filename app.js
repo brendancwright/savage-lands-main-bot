@@ -17,7 +17,11 @@ function updateActivity() {
             if (is_online == "online") {
                 const players = server.players;
                 const maxplayers = server.maxPlayers;
-                return client.user.setActivity(`${players}/${maxplayers}`);
+                const queuedPlayers = server.details.rust_queued_players;
+                if (players == maxplayers) {
+                    return client.user.setActivity(`${players}/${maxplayers} (${queuedPlayers})`)
+                }
+                return client.user.setActivity(`${players}/${maxplayers} (${queuedPlayers})`);
             } else {
                 return client.user.setActivity("Offline");
             }
