@@ -1,0 +1,21 @@
+{
+  "name": "discord-rustserverstatus",
+  "version": "0.0.10",
+  "description": "Updates activity status on discord bot and displays how many players are connect to your rust server from rest api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Kenna",
+  "private": "true",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "request": "^2.88.0",
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
