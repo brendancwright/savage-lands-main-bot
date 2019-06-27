@@ -18,10 +18,10 @@ function updateActivity() {
                 const players = server.players;
                 const maxplayers = server.maxPlayers;
                 const queuedPlayers = server.details.rust_queued_players;
-                if (players == maxplayers) {
+                if (players >= maxplayers) {
                     return client.user.setActivity(`${players}/${maxplayers} (${queuedPlayers})`)
                 }
-                return client.user.setActivity(`${players}/${maxplayers} (${queuedPlayers})`);
+                return client.user.setActivity(`${players}/${maxplayers}`);
             } else {
                 return client.user.setActivity("Offline");
             }
